@@ -8,7 +8,7 @@ Currently deployed at https://hng-task-2-movie-site.vercel.app/
 
 ## Development
 
-Created with JavaScript, React, TypeScript, and TailwindCSS
+Created with JavaScript, React, TypeScript, and TailwindCSS.
 
 ## Available Scripts
 
