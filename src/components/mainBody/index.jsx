@@ -4,8 +4,9 @@ import React, { useState, useEffect } from "react";
 const MainBody = () => {
 	const [movies, setMovies] = useState([]);
 	// `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}`;
+	// The endpoint for popular movies
 
-	const api_key = "93be22d828f88cd57618f4e1cbf4c408";
+	const api_key = process.env.REACT_APP_API_KEY;
 	const searchMovies = async () => {
 		try {
 			const response = await fetch(
@@ -32,7 +33,7 @@ const MainBody = () => {
 			<h1 className="text-3xl font-semibold">Popular Movie</h1>
 			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-11">
 				{movies.map((movie, id) => {
-					return <MovieCard {...movie} key={id}/>;
+					return <MovieCard {...movie} key={id} />;
 				})}
 			</div>
 		</div>

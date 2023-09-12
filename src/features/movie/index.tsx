@@ -14,7 +14,7 @@ interface Movie {
 const MovieUI: React.FC = () => {
 	const { id } = useParams();
 	const [movie, setMovie] = useState<Movie | null>(null);
-	const api_key = "93be22d828f88cd57618f4e1cbf4c408";
+    const api_key = process.env.REACT_APP_API_KEY
 
 	useEffect(() => {
 		const fetchMovieDetails = async () => {
