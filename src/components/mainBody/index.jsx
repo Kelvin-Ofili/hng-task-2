@@ -32,7 +32,7 @@ const MainBody = () => {
 		<div className="p-16">
 			<h1 className="text-3xl font-semibold">Popular Movie</h1>
 			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-11">
-				{movies.map((movie, id) => {
+				{movies.slice(0, 10).map((movie, id) => {
 					return <MovieCard {...movie} key={id} />;
 				})}
 			</div>
